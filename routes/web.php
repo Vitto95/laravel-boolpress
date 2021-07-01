@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/* 
+  Rotte relative all'autenticazione.
+  Se viene segnalato errore, sotto "Auth", non è un problema.
+*/
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
