@@ -8,5 +8,7 @@
 </head>
 <body>
   <h1>Parte Frontend</h1>
+  <h3>Con Vue</h3>
+  <h3>E Javascript...</h3>
 </body>
 </html>

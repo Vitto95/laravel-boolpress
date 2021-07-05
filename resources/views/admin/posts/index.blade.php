@@ -24,6 +24,7 @@
             <td><a class="btn btn-primary" href="{{route('admin.posts.show', $post)}}">SHOW</a></td>
             <td><a class="btn btn-info" href="{{ route('admin.posts.edit', $post) }}">EDIT</a></td>
             <td>
+              
               <form action="{{ route('admin.posts.destroy', $post) }}" method="POST">
                 @csrf
                 @method('DELETE')
