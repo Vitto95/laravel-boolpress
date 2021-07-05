@@ -26,7 +26,8 @@ class PostRequest extends FormRequest
         /* inseriamo qui le nostre condizioni */
         return [
           'title' =>'required|max:20',
-          'content' => 'required|min:3'
+          'content' => 'required|min:3',
+          'category_id' => 'nullable|exists:categories,id'
         ];
     }
     /* messaggi in caso di errore */
@@ -35,7 +36,8 @@ class PostRequest extends FormRequest
         'title.required' => 'Il titolo è un campo obbligatorio',
         'title.max' => 'Sono consentiti al massimo :max caratteri',
         'content.min' => 'Sono consentiti al minimo :min caratteri',
-        'content.required' => 'Il contenuto è un campo obbligatorio'
+        'content.required' => 'Il contenuto è un campo obbligatorio',
+        'category_id.exists' => 'Categoria scelta non presente'
       ];
     }
 }
