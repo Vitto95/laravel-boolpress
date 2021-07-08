@@ -3564,7 +3564,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm._l(_vm.posts, function(post, index) {
+      _vm._l(_vm.posts, function(post) {
         return _c("section", { key: "p" + post.id }, [
           _c("h3", [_vm._v(_vm._s(post.title))]),
           _vm._v(" "),

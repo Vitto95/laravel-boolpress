@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section v-for="(post, index) in posts" :key="'p' + post.id">
+        <section v-for="post in posts" :key="'p' + post.id">
             <h3>{{ post.title }}</h3>
             <h4>{{ post.category }}</h4>
             <h5>{{ post.date }}</h5>
