@@ -1,8 +1,6 @@
 <template>
-    <div class="container">
-        <!--  <h1>Hello Word - App.vue</h1>
-
-        <section v-for="(post, index) in posts" :key="index">
+    <div>
+        <section v-for="(post, index) in posts" :key="'p' + post.id">
             <h3>{{ post.title }}</h3>
             <h4>{{ post.category }}</h4>
             <h5>{{ post.date }}</h5>
@@ -24,24 +22,15 @@
             >
                 next
             </button>
-        </div> -->
-
-        <Header />
-
-        <router-view></router-view>
+        </div>
     </div>
 </template>
 
 <script>
-import axios from "axios"; /* anche se non metto il percorso completo, vue va a cercare dentro node_modules */
-
-import Header from "./components/Header.vue";
+import axios from "axios";
 
 export default {
-    name: "App",
-    components: {
-        Header
-    },
+    name: "Blog",
     data() {
         return {
             posts: [],
@@ -75,6 +64,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import "../sass/frontoffice/global";
-</style>
+<style></style>

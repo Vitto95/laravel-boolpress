@@ -19,7 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::namespace('Api')
+    ->name('api.')
     ->group(function(){
-      Route::get('posts', 'PostController@index')->name('api.posts');
+      Route::get('posts', 'PostController@index')->name('posts');
     });
 

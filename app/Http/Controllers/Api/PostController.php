@@ -46,6 +46,8 @@ class PostController extends Controller
         // il risultato sono una serie di elementi annidati
         //$posts = Post::with(['category','tags'])->paginate(3);
 
+        /* $post = Post::with('category')->get(); */
+
         return response()->json($posts);
 
 
