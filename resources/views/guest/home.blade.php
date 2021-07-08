@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Home Pubblica</title>
 </head>
 <body>
-  <h1>Parte Frontend</h1>
-  <h3>Con Vue</h3>
-  <h3>E Javascript...</h3>
+
+  <div id="app"></div>
+
+  <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
