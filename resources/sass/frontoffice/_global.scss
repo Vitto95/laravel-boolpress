@@ -10,3 +10,12 @@
 body {
     font-family: $font-family-sans-serif;
 }
+
+.nav-pages {
+    button {
+        border: none;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

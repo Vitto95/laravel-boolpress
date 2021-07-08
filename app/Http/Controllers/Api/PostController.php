@@ -39,7 +39,7 @@ class PostController extends Controller
             'categories.name as category'
         )
         ->join('categories','posts.category_id','categories.id')
-        ->get();
+        ->paginate(3);
 
         // è possibile fare le jopin in questo modo
         // con with si passa la proprietà della join prensente nel Model

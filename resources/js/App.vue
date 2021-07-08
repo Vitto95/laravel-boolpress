@@ -10,6 +10,21 @@
                 <a href="#">go...</a>
             </div>
         </section>
+
+        <div class="nav-pages">
+            <button
+                class="badge badge-primary"
+                @click="getPosts(pagination.current - 1)"
+            >
+                prev
+            </button>
+            <button
+                class="badge badge-primary"
+                @click="getPosts(pagination.current + 1)"
+            >
+                next
+            </button>
+        </div>
     </div>
 </template>
 
@@ -20,15 +35,24 @@ export default {
     name: "App",
     data() {
         return {
-            posts: []
+            posts: [],
+            pagination: {}
         };
     },
     methods: {
-        getPosts() {
+        getPosts(page = 1) {
             axios
-                .get("http://127.0.0.1:8000/api/posts")
+                .get("http://127.0.0.1:8000/api/posts", {
+                    params: {
+                        page: page
+                    }
+                })
                 .then(res => {
-                    this.posts = res.data;
+                    this.posts = res.data.data;
+                    this.pagination = {
+                        current: res.data.current_page,
+                        last: res.data.last_page
+                    };
                     console.log("POSTS", this.posts);
                 })
                 .catch(err => {
